@@ -178,11 +178,11 @@ export async function BuyProduct(formData: FormData) {
     success_url:
       process.env.NODE_ENV === "development"
         ? "http://localhost:3000/payment/success"
-        : "",
+        : "https://raadui.vercel.app/payment/success",
     cancel_url:
       process.env.NODE_ENV === "development"
         ? "http://localhost:3000/payment/cancel"
-        : "",
+        : "https://raadui.vercel.app/payment/cancel",
   });
 
   return redirect(session.url as string);
@@ -211,11 +211,11 @@ export async function CreateStripeAccoutnLink() {
     refresh_url:
       process.env.NODE_ENV === "development"
         ? `http://localhost:3000/billing`
-        : ``,
+        : `https://raadui.vercel.app/billing`,
     return_url:
       process.env.NODE_ENV === "development"
         ? `http://localhost:3000/return/${data?.connectedAccountId}`
-        : ``,
+        : `https://raadui.vercel.app/${data?.connectedAccountId}`,
     type: "account_onboarding",
   });
 
