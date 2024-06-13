@@ -18,7 +18,7 @@ interface iAppProps {
   userImage: string | undefined;
 }
 
-export function UserNav({ email, name, userImage }: iAppProps) {
+export function UserNav({ email, name, userImage }: iAppProps,) {
 
   return (
     <DropdownMenu>

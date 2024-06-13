@@ -6,7 +6,9 @@ import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+
 export async function POST(req: Request) {
+  
   const body = await req.text();
 
   const signature = headers().get("Stripe-Signature") as string;
@@ -31,7 +33,7 @@ export async function POST(req: Request) {
 
       const { data, error } = await resend.emails.send({
         from: "Raad Market-Place <onboarding@resend.dev>",
-        to: ["your_email"],
+        to: ['sooraopen@gmail.com'],
         subject: "Your Product from Raad Market-Place",
         react: ProductEmail({
           link: link as string,

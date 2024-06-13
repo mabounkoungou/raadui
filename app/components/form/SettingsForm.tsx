@@ -52,7 +52,6 @@ export function SettingsForm({ email, firstName, lastName }: iAppProps) {
           <Label>Last Name</Label>
           <Input name="lastName" type="text" defaultValue={lastName} />
         </div>
-
         <div className="flex flex-col gap-y-2">
           <Label>Email</Label>
           <Input

@@ -47,7 +47,7 @@ export default async function BillingRoute() {
         <CardContent>
           {data?.stripeConnectedLinked === false && (
             <form action={CreateStripeAccoutnLink}>
-              <Submitbutton title="Link your Accout to stripe" />
+              <Submitbutton title="Link your Account to stripe" />
             </form>
           )}
 
